@@ -5,7 +5,7 @@ import { Gallery } from './pages/gallery';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
     return (
-        <Router>
+        <Router basename="/floral">
             <Routes>
                 <Route path="/" element={<Landing />} />
                 <Route path="/gallery" element={<Gallery />} />
