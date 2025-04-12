@@ -1,0 +1,157 @@
+@keyframes scale-in {
+	0% {
+		border-radius: '20px';
+		transform: scaleX(0);
+	}
+
+	100% {
+		border-radius: 0;
+	}
+}
+
+@font-face {
+	font-family: calligraphScript;
+	src: url(../assets/Rockybilly.ttf);
+}
+
+#carousel {
+	position: relative;
+	width: 100%;
+	background-color: white;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.carousel-inner {
+	width: 100%;
+	height: 100%;
+
+	.carousel-item {
+		width: 100%;
+		height: 100%;
+		border-radius: 20px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+.btns {
+	position: absolute;
+	bottom: 15%;
+	right: 15%;
+	display: flex;
+	gap: 1rem;
+
+	&>button {
+		border: none;
+		text-decoration: none;
+		border-radius: 100%;
+		width: 50px;
+		aspect-ratio: 1;
+		background-color: #de83a0;
+		color: black;
+
+		span {
+			display: grid;
+			padding: 0;
+			margin: 0;
+			font-weight: 500;
+			place-content: center;
+			font-size: 2rem;
+		}
+	}
+}
+
+.header {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #de83a0;
+	padding: 3rem 2rem;
+	padding-bottom: 0;
+
+	img {
+		width: 100%;
+		transform: translateX(-50%);
+	}
+
+	h1 {
+		font-size: 4rem;
+		font-family: calligraphScript;
+		color: white;
+		margin: 0;
+	}
+}
+
+.shop {
+	position: absolute;
+	bottom: 15%;
+	left: 15%;
+	font-size: 2rem;
+	font-weight: 700;
+	font-family: Outfit;
+
+	a {
+		text-decoration: none;
+		color: white;
+		position: relative;
+		padding: 10px 2rem;
+		background-color: #de83a0;
+		color: black;
+		border-radius: 20px;
+		overflow: hidden;
+		display: block;
+		transition: 0.4s ease-in-out;
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			transition: 0.5s ease-in-out;
+			transition-delay: 0.6s;
+		}
+
+		&:hover {
+			background-color: white;
+			color: black;
+
+			&::after {
+				transform: scaleX(0.3);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.header {
+		width: 100%;
+		padding-inline: 0;
+
+		h1 {
+			margin: 0;
+			font-size: 1.8rem;
+		}
+	}
+
+	.carousel-inner {
+		.carousel-item img {
+			object-fit: cover;
+			border-radius: 0;
+		}
+	}
+
+	.btns {
+		display: none;
+	}
+
+	.shop {
+		top: 70%;
+		left: 50%;
+		transform: translate(-50%);
+	}
+}

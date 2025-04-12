@@ -1,0 +1,23 @@
+#gallery {
+	display: flex;
+	place-content: center;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+	padding: 16px;
+	max-width: 900px;
+}
+
+.gallery-item {
+	position: relative;
+	height: fit-content;
+}
+
+.gallery-item img {
+	width: 100%;
+	object-fit: cover;
+	/* Ensures the image covers the container */
+}
