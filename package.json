@@ -3,7 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https://caspgin.github.io/floral",
+    "homepage": "https://caspgin.github.io/floral/",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
