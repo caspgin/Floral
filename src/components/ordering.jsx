@@ -1,8 +1,5 @@
 import '../css/ordering.css';
-
 export function Ordering() {
-    const handleClick = () => {};
-
     return (
         <section id="ordering">
             <div className="info">

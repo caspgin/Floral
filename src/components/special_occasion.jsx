@@ -11,15 +11,16 @@ export function SpecialOccasion() {
                 <div>
                     <div> Wedding Orders</div>
                     <div>
-                        <span>Free half hour consultation</span>
+                        <span>Free 30-minutes Consultation</span>
                         <ul>
                             <li>
-                                <p> Please book an appointment </p>
+                                <p> Please book an appointment. </p>
                             </li>
                             <li>
                                 <p>
-                                    Please bring some pictures or inspiration
-                                    material to have a better understanding.
+                                    Please bring any relevant images or
+                                    inspiration materials to help us better
+                                    understand your vision.
                                 </p>
                             </li>
                         </ul>

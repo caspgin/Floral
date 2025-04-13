@@ -4,7 +4,6 @@ import Flower1 from '../assets/photos/carousel_1.jpg';
 import Flower2 from '../assets/photos/carousel_2.png';
 import Flower3 from '../assets/photos/carousel_3.jpg';
 import Flower4 from '../assets/photos/carousel_4.jpg';
-import Header from '../assets/photos/PassionFloral72.jpg';
 
 export function Hero() {
     const slides = [Flower1, Flower2, Flower3, Flower4];
@@ -50,10 +49,9 @@ export function Hero() {
                 </button>
             </div>
             <div className="header">
-                {
-                    // <img src={Header} alt="title image" />
-                }
-                <h1>Passion Floral</h1>
+                <a href="">
+                    <h1>Passion Floral</h1>
+                </a>
             </div>
             <div className="shop">
                 <a

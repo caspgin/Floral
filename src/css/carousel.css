@@ -53,7 +53,7 @@
 		width: 50px;
 		aspect-ratio: 1;
 		background-color: #de83a0;
-		color: black;
+		color: white;
 
 		span {
 			display: grid;
@@ -70,21 +70,23 @@
 	position: absolute;
 	top: 30%;
 	left: 50%;
-	transform: translateX(-50%);
 	background-color: #de83a0;
+	transform: translateX(-50%);
 	padding: 3rem 2rem;
 	padding-bottom: 0;
 
-	img {
-		width: 100%;
-		transform: translateX(-50%);
-	}
-
-	h1 {
-		font-size: 4rem;
-		font-family: calligraphScript;
+	a {
+		text-decoration: none;
 		color: white;
 		margin: 0;
+		padding: 0;
+
+		h1 {
+			font-size: clamp(1.8rem, 4vw, 4rem);
+			font-family: calligraphScript;
+			margin: 0;
+			line-height: 4rem;
+		}
 	}
 }
 
@@ -102,7 +104,7 @@
 		position: relative;
 		padding: 10px 2rem;
 		background-color: #de83a0;
-		color: black;
+		color: white;
 		border-radius: 20px;
 		overflow: hidden;
 		display: block;
@@ -127,17 +129,20 @@
 	}
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
 	.header {
 		width: 100%;
 		padding-inline: 0;
 
-		h1 {
-			margin: 0;
-			font-size: 1.8rem;
+		a {
+			h1 {
+				margin: 0;
+			}
 		}
 	}
+}
 
+@media screen and (max-width: 425px) {
 	.carousel-inner {
 		.carousel-item img {
 			object-fit: cover;

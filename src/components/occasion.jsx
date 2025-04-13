@@ -76,7 +76,10 @@ export function Occasion() {
                 </div>
             </div>
             <div className="btn">
-                <a href="" target="_blank">
+                <a
+                    href="https://www.passionfloralboutique.net/"
+                    target="_blank"
+                >
                     Shop
                     <span className="material-symbols-outlined">
                         open_in_new
