@@ -136,6 +136,13 @@
 }
 
 @media screen and (max-width: 768px) {
+	.carousel-inner {
+		.carousel-item img {
+			object-fit: cover;
+			border-radius: 0;
+		}
+	}
+
 	.header {
 		width: 100%;
 		padding-inline: 0;
