@@ -9,68 +9,35 @@ export function Occasion() {
     return (
         <section id="occasion">
             <h2>Shop by Occasion</h2>
-            <div className="image-area-mobile">
-                <div className="product_element">
-                    <div>
-                        <img src={ocassion1} alt="" />
-                    </div>
-                    <div>For all Occasions</div>
-                </div>
-                <div className="product_element">
-                    <div>
-                        <img src={ocassion2} alt="" />
-                    </div>
-
-                    <div>Birthday</div>
-                </div>
-                <div className="product_element">
-                    <div>
-                        <img src={ocassion3} alt="" />
-                    </div>
-                    <div>New Baby</div>
-                </div>
-                <div className="product_element">
-                    <div>
-                        <img src={ocassion4} alt="" />
-                    </div>
-                    <div>Condolences</div>
-                </div>
-                <div className="product_element">
-                    <div>
-                        <img src={ocassion5} alt="" />
-                    </div>
-                    <div>Graduations</div>
-                </div>
-            </div>
             <div className="image-area">
                 <div className="product_element">
                     <div>
-                        <img src={ocassion1} alt="" />
+                        <img src={ocassion1} alt="" loading="lazy" />
                     </div>
                     <div>For all Occasions</div>
                 </div>
                 <div className="product_element">
                     <div>
-                        <img src={ocassion2} alt="" />
+                        <img src={ocassion2} alt="" loading="lazy" />
                     </div>
 
                     <div>Birthday</div>
                 </div>
                 <div className="product_element">
                     <div>
-                        <img src={ocassion3} alt="" />
+                        <img src={ocassion3} alt="" loading="lazy" />
                     </div>
                     <div>New Baby</div>
                 </div>
                 <div className="product_element">
                     <div>
-                        <img src={ocassion4} alt="" />
+                        <img src={ocassion4} alt="" loading="lazy" />
                     </div>
                     <div>Condolences</div>
                 </div>
                 <div className="product_element">
                     <div>
-                        <img src={ocassion5} alt="" />
+                        <img src={ocassion5} alt="" loading="lazy" />
                     </div>
                     <div>Graduations</div>
                 </div>
@@ -78,6 +45,7 @@ export function Occasion() {
             <div className="btn">
                 <a
                     href="https://www.passionfloralboutique.net/"
+                    aria-label="link to online shop of passion floral"
                     target="_blank"
                 >
                     Shop

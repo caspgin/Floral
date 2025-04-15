@@ -17,6 +17,7 @@ export function Ordering() {
                         </div>
                         <a
                             href="https://www.passionfloralboutique.net/"
+                            aria-label="link to online shop"
                             target="_blank"
                         >
                             <span className="material-symbols-outlined">

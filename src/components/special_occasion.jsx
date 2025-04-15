@@ -6,7 +6,7 @@ export function SpecialOccasion() {
         <section id="special_occ">
             <div className="wedding">
                 <div>
-                    <img src={weddingImg} alt="" srcset="" />
+                    <img src={weddingImg} alt="" loading="lazy" srcset="" />
                 </div>
                 <div>
                     <div> Wedding Orders</div>
@@ -29,7 +29,7 @@ export function SpecialOccasion() {
             </div>
             <div className="corporate">
                 <div>
-                    <img src={corpImg} alt="" srcset="" />
+                    <img src={corpImg} alt="" loading="lazy" srcset="" />
                 </div>
 
                 <div>
