@@ -1,0 +1,262 @@
+@keyframes scroll-text {
+	to {
+		transform: translateX(calc(-50% - 0.5rem));
+	}
+}
+
+* {
+	box-sizing: content-box;
+}
+
+footer {
+	--r: 30px;
+	width: 100%;
+	min-height: 550px;
+	background-color: #151515;
+	border-top-right-radius: var(--r);
+	border-top-left-radius: var(--r);
+	display: flex;
+	overflow: hidden;
+	color: white;
+
+	&>.left {
+		display: grid;
+		grid-template-rows: 1fr 0.5fr;
+		border-right: 1px solid #fcfcfc;
+		width: 50%;
+
+		&>.top {
+			display: flex;
+			padding-top: 2rem;
+			padding-left: 2rem;
+
+			.socialMedia {
+				width: 40%;
+				border-right: 1px solid #fcfcfc;
+				display: flex;
+				flex-direction: column;
+				padding: 1rem;
+				padding-left: 0;
+				padding-top: 0;
+				gap: 2rem;
+
+				&>div:nth-of-type(1) {
+					height: 2%;
+					position: relative;
+					font-size: 16px;
+					color: #515151;
+
+					&>div {
+						position: absolute;
+					}
+				}
+
+				.icon-container {
+					display: grid;
+					place-content: center;
+					flex-grow: 1;
+
+					.icon {
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						grid-template-rows: 1fr 1fr;
+						gap: 0.5rem;
+
+						&>div {
+							&>* {
+								display: block;
+								--size: 50px;
+								--max-size: 80px;
+
+								svg {
+									width: var(--max-size);
+									height: var(--max-size);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.time {
+				flex-grow: 1;
+				display: flex;
+				flex-direction: column;
+				padding: 1rem;
+				padding-top: 0;
+				gap: 2rem;
+
+				&>div:nth-of-type(1) {
+					font-size: 16px;
+					position: relative;
+					height: 2%;
+					color: #515151;
+
+					&>div {
+						position: absolute;
+					}
+				}
+
+				&>.schedule-container {
+					flex-grow: 1;
+					display: grid;
+					justify-content: center;
+					align-items: center;
+					height: fit-content;
+					font-size: 1.3rem;
+
+					&>.schedule {
+						&>* {
+							margin-top: 0.5rem;
+							display: grid;
+							grid-template-columns: 1fr 1fr;
+							gap: 10px;
+							border-bottom: 0.5px solid #a9a9a9;
+
+							&>* {
+								padding: 0;
+								margin: 0;
+								text-align: end;
+							}
+
+							&>p:nth-of-type(1) {
+								text-align: start;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&>.bottom {
+			padding: 0;
+
+			&>div {
+				display: grid;
+				padding-left: 2rem;
+				grid-template-rows: 1fr 1fr 1fr;
+				height: 100%;
+
+				&>* {
+					border-top: 1px solid #fcfcfc;
+					display: flex;
+					position: relative;
+
+					&>div:nth-of-type(1) {
+						width: 20%;
+						position: relative;
+
+						&>div {
+							position: absolute;
+							left: 2px;
+							font-size: 14px;
+							color: #515151;
+						}
+					}
+
+					&>div:nth-of-type(2) {
+						flex-grow: 1;
+						padding-right: 2rem;
+						align-self: center;
+						text-align: end;
+						font-size: 1.4rem;
+
+						* {
+							color: white;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&>.right {
+		width: 50%;
+		height: 80vh;
+		padding-bottom: 1rem;
+
+		.reel-container {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+
+			&>.scroller {
+				max-width: 100%;
+				overflow: hidden;
+
+				.inner-scroller {
+					gap: 1rem;
+					display: flex;
+					flex-wrap: nowrap;
+					width: max-content;
+					align-items: center;
+					animation: scroll-text 20s var(--_animation-direction, forwards) linear infinite;
+
+					font-family: Vetrino;
+
+					span {
+						display: inline-block;
+						font-size: clamp(2rem, 20vh, 6rem);
+						color: #515151;
+					}
+				}
+
+				&[data-direction='right'] {
+					--_animation-direction: reverse;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	footer {
+		flex-direction: column;
+		gap: 2rem;
+
+		.left {
+			width: 100%;
+			border-bottom: 2px solid white;
+		}
+
+		.right {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 525px) {
+	footer {
+		.left {
+			.top {
+				flex-direction: column;
+				padding-left: 0;
+
+				.socialMedia {
+					border-right: 0px solid #fcfcfc;
+					width: 100%;
+
+					.icon-container>.icon {
+						grid-template-rows: 1fr;
+						grid-template-columns: 1fr 1fr 1fr;
+						gap: 1rem;
+					}
+				}
+
+				.time {
+					padding-inline: 0;
+					padding-block: 2rem;
+				}
+			}
+
+			.bottom {
+				&>div {
+					padding: 0;
+				}
+			}
+		}
+	}
+}

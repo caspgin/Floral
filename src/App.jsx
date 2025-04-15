@@ -1,15 +1,16 @@
 import './App.css';
+import { Layout } from './pages/layout';
 import { Landing } from './pages/landing';
-import { Contact } from './pages/contact';
 import { Gallery } from './pages/gallery';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
     return (
         <Router basename="/floral">
             <Routes>
-                <Route path="/" element={<Landing />} />
-                <Route path="/gallery" element={<Gallery />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route element={<Layout />}>
+                    <Route index element={<Landing />} />
+                    <Route path="gallery" element={<Gallery />} />
+                </Route>
             </Routes>
         </Router>
     );

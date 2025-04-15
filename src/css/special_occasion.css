@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 #special_occ {
 	margin: 2% 0;
 	background-color: white;
@@ -98,7 +102,34 @@
 	}
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 900px) {
+	#special_occ {
+		flex-direction: column;
+		padding: 4px;
+
+		.wedding {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+
+			&>div:nth-of-type(2) {
+				align-self: center;
+			}
+		}
+
+		.corporate {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+
+			&>div:nth-of-type(2) {
+				align-self: center;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
 	#special_occ {
 		flex-direction: column;
 		padding: 4px;
@@ -134,6 +165,10 @@
 					border-radius: 0;
 					width: 100%;
 				}
+			}
+
+			&>div:nth-of-type(2) {
+				width: 100%;
 			}
 		}
 	}
